@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:portfolio/constants/color_schemes.g.dart';
 
 import 'screens/home/home_screen.dart';
 
 void main() {
-  runApp(const Portfolio());
+  runApp(const ProviderScope(child: Portfolio()));
 }
 
 class Portfolio extends StatelessWidget {
@@ -29,4 +30,3 @@ class Portfolio extends StatelessWidget {
     );
   }
 }
-

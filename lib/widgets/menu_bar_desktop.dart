@@ -8,8 +8,9 @@ class MenuBarDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-      child: Row(
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+      child: Flex(
+        direction: Axis.horizontal,
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -50,4 +51,6 @@ class MenuBarDesktop extends StatelessWidget {
       ),
     );
   }
+
+
 }

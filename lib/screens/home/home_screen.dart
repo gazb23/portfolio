@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:portfolio/screens/home/widgets/desktop_body.dart';
 import 'package:portfolio/screens/home/widgets/mobile_body.dart';
+
 import 'package:portfolio/widgets/responsive_layout/responsive_layout.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,17 +11,15 @@ class HomeScreen extends StatefulWidget {
   });
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ResponsiveLayout(
-        mobileBody: MobileBody(),
-        desktopBody: DesktopBody(),
-      ),
+    return const ResponsiveLayout(
+      mobile: MobileHomeScreen(),
+      desktop: DesktopHomeScreen(),
     );
   }
 }

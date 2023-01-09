@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/constants/dimensions.dart';
+import 'package:portfolio/constants/breakpoints.dart';
 
 class ResponsiveLayout extends StatelessWidget {
-  final Widget mobileBody;
-  final Widget desktopBody;
+  final Widget mobile;
+  final Widget desktop;
   const ResponsiveLayout({
     super.key,
-    required this.mobileBody,
-    required this.desktopBody,
+    required this.mobile,
+    required this.desktop,
   });
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < kMobileWidth) {
-          return mobileBody;
+        if (constraints.maxWidth < Breakpoint.mobile) {
+          return mobile;
         } else {
-          return desktopBody;
+          return desktop;
         }
       },
     );
