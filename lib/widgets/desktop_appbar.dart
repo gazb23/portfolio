@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../screens/home/widgets/menu_button.dart';
 
-class MenuBarDesktop extends StatelessWidget {
-  const MenuBarDesktop({super.key});
+class DesktopAppBar extends StatelessWidget {
+  const DesktopAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: Flex(
@@ -16,12 +17,14 @@ class MenuBarDesktop extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: IconButton(
+            child: TextButton(
               onPressed: () {},
-              icon: Icon(
-                Icons.home,
-                color: Colors.grey.shade500,
-                size: 30,
+              child: const Text(
+                'GB',
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2),
               ),
             ),
           ),
@@ -51,6 +54,4 @@ class MenuBarDesktop extends StatelessWidget {
       ),
     );
   }
-
-
 }

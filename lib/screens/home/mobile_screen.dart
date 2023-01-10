@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/home_appbar.dart';
 
-class MobileHomeScreen extends StatelessWidget {
+class MobileHomeScreen extends StatelessWidget  {
   const MobileHomeScreen({
     Key? key,
   }) : super(key: key);
@@ -10,16 +11,7 @@ class MobileHomeScreen extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     final textWidth = MediaQuery.of(context).size.width * 0.5;
     return Scaffold(
-      appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          iconTheme: const IconThemeData(
-            color: Colors.grey,
-          ),
-          leading: IconButton(
-            icon: const Icon(Icons.home),
-            onPressed: () {},
-          )),
+      appBar: const HomeAppBar(),
       endDrawer: const Drawer(),
       body: ListView(
         children: [
