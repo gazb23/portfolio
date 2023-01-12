@@ -12,15 +12,17 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
     if (screenSize.width < Breakpoint.mobile) {
       return AppBar(
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         iconTheme: IconThemeData(
           color: color.onBackground,
         ),
-        leading: IconButton(
-          icon: const Icon(Icons.home),
-          onPressed: () {
-           
-          },
+        leading: TextButton(
+          onPressed: () {},
+          child: const Text(
+            'GB',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 20, letterSpacing: 2),
+          ),
         ),
       );
     } else {

@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 
 class MenuButton extends StatelessWidget {
   final String title;
+  final VoidCallback? onPressed;
 
   const MenuButton({
     Key? key,
     required this.title,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
+      onPressed: onPressed,
       child: Text(
         title,
         style: TextStyle(
@@ -20,7 +23,6 @@ class MenuButton extends StatelessWidget {
           letterSpacing: 3,
         ),
       ),
-      onPressed: () {},
     );
   }
 }
